@@ -1,0 +1,59 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-white" style="height: 74px" xmlns="http://www.w3.org/1999/html">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'qrcode:qr_gen' %}">
+            <img src="{% static 'main/img/Screenshot from 2023-07-09 01-28-50.png' %}" width="400px" height="80px">
+            {#            <span style="font-size: 24px">Qr Code Generator</span>#}
+            {#            <span style="font-size: 14px">CREATE YOUR QR CODE FOR FREE</span>#}
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            {% if not request.user.is_authenticated %}
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item login">
+                        <a class="nav-link" style="color: #0a53be; text-decoration: transparent;"
+                           href="{% url 'login' %}">Login</a>
+                    </li>
+                    <a href="{% url 'registration' %}">
+                        <button type="button" style="{
+                    .sign:hover {
+                    background-color: #0b5ed7!important;
+                    color: white;
+                    }
+                }" class="btn btn-primary sign">Sign-up
+                        </button>
+                    </a>
+                </ul>
+            {% else %}
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <a href="{% url 'logout' %}">
+                        <button type="button" style="{
+                    .sign:hover {
+                    background-color: #0b5ed7!important;
+                    color: white;
+                    }
+                }" class="btn btn-primary sign">Log-out
+                        </button>
+                    </a>
+
+                    <a href="{% url 'qrcode:dashboard' %}">
+                        <button style="background-color: #00BBFF; color: white; font-weight: 600; width: 140px; height: 43px; border-radius: 100px; border: none; margin-right: 15px">
+                            DASHBOARD
+                        </button>
+                    </a>
+                </ul>
+            {% endif %}
+            <div class="dropdown-center">
+                <button class="btn btn-secondary dropdown-toggle btn1" type="button" data-bs-toggle="dropdown"
+                        style="background-color: #00BBFF;color: white;font-family: 'Source Sans Pro', sans-serif;font-size: 17px; font-weight: 600; border: none; border-radius: 100px; height: 43px; width: 240px;"
+                        aria-expanded="false">
+                    MORE INFORMATION
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item" href="#">RU</a></li>
+                    <li><a class="dropdown-item" href="#">About us </a></li>
+                    <li><a class="dropdown-item" href="#">Copyright</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

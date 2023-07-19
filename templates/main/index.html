@@ -1,0 +1,280 @@
+{% extends 'layouts/base.html' %}
+{% block title %}
+    Create Your Own Qr Code
+{% endblock %}
+{% block style %}
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        textarea {
+            font-size: 26px;
+            color: black;
+            font-weight: 700;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        ::placeholder {
+            color: #616568;
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        hr {
+            padding: 1px;
+            margin: 3px;
+        }
+
+        main {
+            margin: 0 auto;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .input1 {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .generate {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #eee;
+
+        }
+
+        .generate:hover {
+            background-color: #ddd;
+        }
+
+        .qr-img {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .qr-img img {
+            width: 100%;
+        }
+
+        .part1 {
+            position: absolute;
+            left: 220px;
+            width: 756px;
+            height: 555px;
+            border-radius: 10px;
+            border: #616568 2px solid;
+            background-color: white;
+        }
+
+        .part2 {
+            width: 379px;
+            height: 555px;
+            position: absolute;
+            border-radius: 10px;
+            right: 320px;
+            background-color: white;
+        }
+
+        .main2 {
+            margin: 10px;
+        }
+
+        section {
+            width: 100%;
+            height: calc(100vh - 84px);
+        }
+
+        .section1 {
+            margin-top: -50px;
+        }
+
+        .icon-btn a > button {
+            margin-right: 10px;
+            border: none;
+            background-color: transparent;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #616568;
+            font-weight: 700;
+            width: 104px;
+            text-align: left;
+            transition: 1.2s;
+            border-radius: 5px;
+            margin-bottom: 12px;
+        }
+
+        .icon-btn a > button:hover {
+            background-color: #DFDFDF;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 250px;
+            left: 0;
+            background-color: #FFF;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #C0CED5;
+            border-left: none;
+            border-bottom-right-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: .5s ease-in-out;
+            height: 200px;
+        }
+
+        .sticky > a > i {
+            font-size: 24px;
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section style="background-color: #f1f3f4" class="section1">
+        <main>
+            <div class="sticky">
+                <a href="https://twitter.com/home"><i class="bi bi-twitter"></i></a>
+                <hr>
+                <a href="https://ru-ru.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <hr>
+                <a href="https://google.com/"><i class="bi bi-google"></i></a>
+                <hr>
+                <a href="https://instagram.com/"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="part1 ms-auto mt-5 shadow-lg main2">
+                <div class="icon-btn mt-5 ms-5">
+                    <a href="#">
+                        <button>
+                            <i class="bi bi-person-vcard"></i>
+                            VSCARD
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-file-earmark-text"></i>
+                            TEXT
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="fa-light fa-at"></i>
+                            E-MAIL
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-chat-left-dots"></i>
+                            SMS
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-wifi"></i>
+                            Wifi
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-currency-bitcoin"></i>
+                            BITCOIN
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-twitter"></i>
+                            twitter
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-facebook"></i>
+                            facebook
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+                            PDF
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-music-note-list"></i>
+                            music
+                            <hr>
+                        </button>
+                    </a>
+                    <a>
+                        <button>
+                            <i class="bi bi-chat-left-dots"></i>
+                            SMS
+                            <hr>
+                        </button>
+                    </a>
+                </div>
+                <form method="post" class="ms-5" style="margin-top: 50px; width: 645px;">
+                    {% csrf_token %}
+                    <textarea type="text" class="input1" name="data" id="data"
+                              style="border: none; outline: none; margin-top: 15px; resize: none"
+                              placeholder="Enter any text url of web site for generating"></textarea>
+                    <button class="generate">Generate</button>
+                </form>
+            </div>
+            <div class="part2 mt-5 shadow-lg">
+                <div class="qr-img">
+                    {% if img_name %}
+                        <img src="/media/{{ img_name }}" alt="qr code" width="280" height="290" class="mt-4">
+                        <div style=" margin-top: 40px">
+                            <a href="/media/{{ img_name }}" download>
+                                <button
+                                        style="width: 300px; border: none; outline: none; margin-top: 20px;font-family: 'Source Sans Pro', sans-serif; font-weight: 600;border-radius: 15px;background-color: #90c52d;color: #fff; margin: 0; padding: 6px 12px;">
+                                    <i class="bi bi-download"></i> DOWNLOAD <br>JPEG
+                                </button>
+                            </a>
+                        </div>
+                    {% else %}
+                        <img src="../../media/default.png"
+                             style="opacity: 0.4; filter: alpha(opacity=40); background-color: #000; height: 290px" class="mt-4">
+                        <div style=" margin-top: 40px">
+                            <a href="/media/{{ img_name }}" download>
+                                <button disabled
+                                        style="width: 300px; opacity: 0.4; filter: alpha(opacity=40); background-color: #000; border: none; outline: none; margin-top: 20px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;border-radius: 15px;background-color: #90c52d;color: #fff; margin: 0; padding: 6px 12px;">
+                                    <i class="bi bi-download"></i> DOWNLOAD <br>JPEG
+                                </button>
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </main>
+    </section>
+    {% block script %}
+    {% endblock %}
+{% endblock %}
