@@ -9,30 +9,26 @@ from django.contrib.auth.decorators import login_required
 
 def qr_gen_view(request):
     if request.method == 'POST':
-        data = request.POST
-        title = data.get("data")
-        title = title.strip()
-        img = make(title)
-        img_name = f'qr_{time.time()}.png'
-        img.save(settings.MEDIA_ROOT / img_name)
-        obj = DashboardModel.objects.create(title=title, qr_img=img_name, user=request.user)
-        obj.save()
-        print(obj.qr_img)
+        try:
+            data = request.POST
+            title = data.get("data")
+            title = title.strip()
+            img = make(title)
+            img_name = f'qr_{time.time()}.png'
+            img.save(settings.MEDIA_ROOT / img_name)
+            obj = DashboardModel.objects.create(title=title, qr_img=img_name, user=request.user)
+            obj.save()
+            print(obj.qr_img)
+        except:
+            data = request.POST
+            title = data.get("data")
+            title = title.strip()
+            img = make(title)
+            img_name = f'qr_{time.time()}.png'
+            img.save(settings.MEDIA_ROOT / img_name)
+            print(img)
         return render(request, 'main/index.html', {'img_name': img_name})
     return render(request, 'main/index.html')
-
-
-# def qr_gen_guest_view(request):
-#     if request.method == 'POST':
-#         data = request.POST
-#         title = data.get("data")
-#         title = title.strip()
-#         img = make(title)
-#         img_name = f'qr_{time.time()}.png'
-#         img.save(settings.MEDIA_ROOT / img_name)
-#         print(img)
-#         return render(request, 'main/index.html', {'img_name': img_name})
-#     return render(request, 'main/index.html')
 
 
 @login_required

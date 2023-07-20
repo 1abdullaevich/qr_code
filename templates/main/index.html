@@ -49,6 +49,7 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            margin-top: 50px !important;
         }
 
         .generate {
@@ -126,6 +127,12 @@
             background-color: #DFDFDF;
         }
 
+        .part3 {
+            font-family: 'Mogra', cursive;
+            font-weight: 500;
+            width: 645px;
+        }
+
         .sticky {
             position: fixed;
             top: 250px;
@@ -165,7 +172,7 @@
             </div>
             <div class="part1 ms-auto mt-5 shadow-lg main2">
                 <div class="icon-btn mt-5 ms-5">
-                    <h1 class="part3">Create and share any Qr Codes you want</h1>
+                    <h1 class="part3">Create and share any Qr Codes you want !</h1>
                 </div>
                 <form method="post" class="ms-5" style="margin-top: 50px; width: 645px;">
                     {% csrf_token %}
@@ -204,6 +211,18 @@
             </div>
         </main>
     </section>
+{#    <section style="background-color: #f7f8f9; height: 140vh">#}
+{#        <div style="position: relative">#}
+{#            <h1 class="d-flex justify-content-center"#}
+{#                style="font-family: 'Mogra', cursive; position: absolute; top: 50px; left: 26%;">I’m new to QR Codes. What should I#}
+{#                know?</h1>#}
+{#            <h3 class=" d-flex justify-content-center" style="font-family: 'Mogra'; position: absolute; top: 120px; left: 27%;">Glad you asked! Here’s a few#}
+{#                basics to get you started.</h3>#}
+{#        </div>#}
+{#        <div style="position: relative">#}
+{#            <img src="https://www.qr-code-generator.com/wp-content/themes/qr/new_structure/assets/media/images/startpage/v2/hand-qrcodes.png" width="635px" height="800px" style="position: absolute; top: 200px; left: 13%">#}
+{#        </div>#}
+{#    </section>#}
     {% block script %}
     {% endblock %}
 {% endblock %}

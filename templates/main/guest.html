@@ -14,13 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Reggae+One&family=Rowdies&family=Russo+One&family=Source+Sans+3:wght@500&display=swap"
-          rel="stylesheet">
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,600&display=swap');
@@ -269,14 +262,6 @@
 <body>
 <section style="background-color: #f7f7f7; width: 100%; padding-bottom: 40px">
     {% include 'layouts/navbar pro.html' %}
-    <form class="d-flex" role="search" method="get" style="position: absolute; top:120px; left: 860px">
-        <input class="form-control input1" style="width: 200px; height: 42.5px" type="search"
-               placeholder="Enter Qr Code Title"
-               aria-label="Search"
-               value="{{ q }}"
-               name="q">
-        <button class="save" style="height: 42.5px " type="submit">Search</button>
-    </form>
     <a href="{% url 'qrcode:qr_gen' %}">
         <button class="create" href="{% url 'qrcode:qr_gen' %}">+ CREATE QR CODE</button>
     </a>
@@ -302,34 +287,7 @@
                     </a>
                 </div>
             </div>
-            {% empty %}
-            <h1 class="d-flex justify-content-center mt-5 mb-5" style="margin-top: 150px!important; font-family: 'Mogra', cursive;">Sorry
-                you dont have any scans!</h1>
         {% endfor %}
-        <nav aria-label="Page navigation example" class="container d-flex justify-content-xxl-center">
-            <ul class="pagination">
-                {% if objs.has_previous %}
-                    <li class="page-item ">
-                        <a class="page-link" href="{% url 'qrcode:dashboard' %}?page={{ objs.previous_page_number }}"
-                           aria-label="Previous"><span aria-hidden="true">&laquo</span>
-                        </a>
-                    </li>
-                {% endif %}
-                {% for stuff in stuffs.page_range %}
-                    <li class="page-item {% if objs.number == stuff %}active{% endif %} "><a class="page-link"
-                                                                                             href="{% url 'qrcode:dashboard' %}?page={{ stuff }}">{{ stuff }}</a>
-                    </li>
-                {% endfor %}
-                {% if objs.has_next %}
-                    <li class="page-item">
-                        <a class="page-link" href="{% url 'qrcode:dashboard' %}?page={{ objs.next_page_number }}"
-                           aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                {% endif %}
-            </ul>
-        </nav>
     </div>
 </section>
 

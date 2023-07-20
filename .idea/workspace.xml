@@ -5,12 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d93c7f9f-8554-4739-af11-c0a5d277d01d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/media/qr_1689842096.3069506.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689842102.0027642.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689842106.5839906.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689868283.1165307.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689868304.0857935.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689869232.9749236.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689870381.937284.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689870385.952754.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689870389.2496674.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689870392.4011257.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689870406.085815.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689870410.6352525.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689875425.6065576.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689876887.5274956.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689877051.892584.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689877051.8988464.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689877079.206511.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/main/guest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qrcodeapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/qrcodeapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/navbar pro.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/navbar pro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +177,7 @@
       <workItem from="1689658961757" duration="8491000" />
       <workItem from="1689680736082" duration="4388000" />
       <workItem from="1689760886455" duration="9444000" />
-      <workItem from="1689840271557" duration="5055000" />
+      <workItem from="1689840271557" duration="17267000" />
     </task>
     <servers />
   </component>
