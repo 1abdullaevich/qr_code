@@ -10,6 +10,10 @@
             text-decoration: none;
         }
 
+        .part3 {
+            font-family: ;
+        }
+
         a {
             text-decoration: none;
         }
@@ -161,83 +165,7 @@
             </div>
             <div class="part1 ms-auto mt-5 shadow-lg main2">
                 <div class="icon-btn mt-5 ms-5">
-                    <a href="#">
-                        <button>
-                            <i class="bi bi-person-vcard"></i>
-                            VSCARD
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-file-earmark-text"></i>
-                            TEXT
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="fa-light fa-at"></i>
-                            E-MAIL
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-chat-left-dots"></i>
-                            SMS
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-wifi"></i>
-                            Wifi
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-currency-bitcoin"></i>
-                            BITCOIN
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-twitter"></i>
-                            twitter
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-facebook"></i>
-                            facebook
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-file-earmark-pdf-fill"></i>
-                            PDF
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-music-note-list"></i>
-                            music
-                            <hr>
-                        </button>
-                    </a>
-                    <a>
-                        <button>
-                            <i class="bi bi-chat-left-dots"></i>
-                            SMS
-                            <hr>
-                        </button>
-                    </a>
+                    <h1 class="part3">Create and share any Qr Codes you want</h1>
                 </div>
                 <form method="post" class="ms-5" style="margin-top: 50px; width: 645px;">
                     {% csrf_token %}
@@ -261,7 +189,8 @@
                         </div>
                     {% else %}
                         <img src="../../media/default.png"
-                             style="opacity: 0.4; filter: alpha(opacity=40); background-color: #000; height: 290px" class="mt-4">
+                             style="opacity: 0.4; filter: alpha(opacity=40); background-color: #000; height: 290px"
+                             class="mt-4">
                         <div style=" margin-top: 40px">
                             <a href="/media/{{ img_name }}" download>
                                 <button disabled

@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d93c7f9f-8554-4739-af11-c0a5d277d01d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/main/img/Screenshot from 2023-07-17 17-21-37.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/main/img/qrcg-pro-logo-bitly.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689526829.5784605.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689573784.7684767.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689573806.9009998.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689574826.8727958.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689575865.2981744.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689592973.2618754.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qr_1689659040.7223516.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/qrcg-pro-logo-bitly.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/layouts/navbar pro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/layouts/page_not_found.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689842096.3069506.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689842102.0027642.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/qr_1689842106.5839906.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qrcodeapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/qrcodeapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +159,8 @@
       <workItem from="1689609342674" duration="5294000" />
       <workItem from="1689658961757" duration="8491000" />
       <workItem from="1689680736082" duration="4388000" />
-      <workItem from="1689760886455" duration="6426000" />
+      <workItem from="1689760886455" duration="9444000" />
+      <workItem from="1689840271557" duration="5055000" />
     </task>
     <servers />
   </component>

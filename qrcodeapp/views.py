@@ -4,6 +4,9 @@ from qrcode import *
 from user.models import DashboardModel
 import time
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
+
+
 def qr_gen_view(request):
     if request.method == 'POST':
         data = request.POST
@@ -19,14 +22,31 @@ def qr_gen_view(request):
     return render(request, 'main/index.html')
 
 
+# def qr_gen_guest_view(request):
+#     if request.method == 'POST':
+#         data = request.POST
+#         title = data.get("data")
+#         title = title.strip()
+#         img = make(title)
+#         img_name = f'qr_{time.time()}.png'
+#         img.save(settings.MEDIA_ROOT / img_name)
+#         print(img)
+#         return render(request, 'main/index.html', {'img_name': img_name})
+#     return render(request, 'main/index.html')
+
+
+@login_required
 def dashboard_view(request):
     q = request.GET.get('q', '')
     objs = DashboardModel.objects.filter(user=request.user)
-    stuff = Paginator(objs, 3)
+    get_page = request.GET.get('page', 1)
+    stuff = Paginator(objs, 2)
+    page = stuff.page(get_page)
     if q:
         objs = objs.filter(title__icontains=q)
     return render(request, 'main/dashboard.html', context={
-        'objs': objs,
+        'objs': page,
+        'stuffs': stuff,
         'q': q
     })
 
