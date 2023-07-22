@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 from qrcode import *
 from user.models import DashboardModel
+from django.utils.translation import gettext_lazy as _
 import time
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required

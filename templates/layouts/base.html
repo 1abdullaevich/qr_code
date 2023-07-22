@@ -32,8 +32,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@500&display=swap" rel="stylesheet">
     {% block style %}
     {% endblock %}
+    {% load i18n %}
 </head>
 <body>
+{% load i18n %}
 {% include 'layouts/navbar.html' %}
 {% block content %}
 {% endblock %}

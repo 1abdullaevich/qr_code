@@ -13,21 +13,22 @@ class RegistrationForm(forms.Form):
     }))
     first_name = forms.CharField(max_length=25, label=_("First_name"))
     last_name = forms.CharField(max_length=25, label=_('Last_name'))
-    password = forms.CharField(max_length=16, min_length=5, widget=forms.PasswordInput, label=_("Password"))
-    confirm_password = forms.CharField(max_length=16, min_length=5, widget=forms.PasswordInput, label=_("Confirm password"))
+    password = forms.CharField(label=_("Password"), max_length=16, min_length=5, widget=forms.PasswordInput)
+    confirm_password = forms.CharField(label=_("Confirm password"), max_length=16, min_length=5,
+                                       widget=forms.PasswordInput)
 
     def clean_confirm_password(self):
         if self.cleaned_data['password'] != self.cleaned_data['confirm_password']:
-            raise ValidationError(_('Passwords are not the same!', 'confirm_password'))
+            raise ValidationError(_('Passwords are not the same!'))
         return self.cleaned_data
 
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=20, label=_("Username"), widget=forms.TextInput(attrs={
-        'placeholder': 'username'
+        'placeholder': _('username')
     }))
     password = forms.CharField(max_length=16, label=_("Password"), min_length=6, widget=forms.PasswordInput(attrs={
-        'placeholder': 'Enter your password'
+        'placeholder': _('Enter your password')
     }))
 
 # class LoginForm(forms.ModelForm):
