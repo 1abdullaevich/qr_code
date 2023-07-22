@@ -2,14 +2,15 @@
 {% load crispy_forms_filters %}
 {% load i18n %}
 {% block title %}
-    Registration
+    {% trans 'Registration' %}
 {% endblock %}
 {% block content %}
     <div class="container mt-3">
         <div class="row">
             <div class="col-6 offset-3">
                 <div class="card mb-5 mt-2">
-                    <div class="card-header text-white" style="background-color: #00BBFF; font-weight: 600; font-size: 16px">
+                    <div class="card-header text-white"
+                         style="background-color: #00BBFF; font-weight: 600; font-size: 16px">
                         {% trans 'REGISTRATION' %}
                     </div>
                     <div class="card-body">

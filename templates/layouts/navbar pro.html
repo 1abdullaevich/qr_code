@@ -14,11 +14,11 @@
                    href="#" role="button"
                    data-bs-toggle="dropdown"
                    aria-expanded="false">
-                    <i class="bi bi-person-circle"></i> Account
+                    <i class="bi bi-person-circle"></i> {% trans 'Account' %}
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{% url 'qrcode:about_us' %}">About us</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="{% url 'qrcode:about_us' %}">{% trans "About us" %}</a></li>
+                    <li><a class="dropdown-item" href="#">{% trans 'Another action' %}</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -26,7 +26,7 @@
                         <a class="nav-link dropdown-toggle" href="{% url 'logout' %}" role="button"
                            data-bs-toggle="dropdown"
                            aria-expanded="false">
-                            Log-out
+                            {% trans 'Log-out' %}
                         </a>
                     </li>
                 </ul>

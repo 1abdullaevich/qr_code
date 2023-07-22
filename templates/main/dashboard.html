@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Dashboard</title>
+    <title>{% trans 'Dashboard' %}</title>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap-icons/font/bootstrap-icons.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
@@ -277,39 +277,38 @@
                aria-label="Search"
                value="{{ q }}"
                name="q">
-        <button class="save" style="height: 42.5px " type="submit">Search</button>
+        <button class="save" style="height: 42.5px " type="submit">{% trans 'Search' %}</button>
     </form>
     <a href="{% url 'qrcode:qr_gen' %}">
-        <button class="create" href="{% url 'qrcode:qr_gen' %}">+ CREATE QR CODE</button>
+        <button class="create" href="{% url 'qrcode:qr_gen' %}">{% trans '+ CREATE QR CODE' %}</button>
     </a>
     <div>
         {{ objs.count }}
         {% for obj in objs.object_list %}
-            <div class="container bg-white shadow-sm mb-5" style="height: 152px; width: 1000px;">
-                <div class="container2" style="width: 700px; position: relative">
-                    <span style="font-size: 12px; margin-left: 35px; color: #d4d4d4; position: absolute; top: 20px">text & url</span>
-                    <i class="bi bi-layout-text-window-reverse mt-5"
-                       style="font-size: 24px; position: absolute; top: 2px; left: -10px"></i>
-                    <h1 style="width: 400px; margin-left: 30px; position: absolute; top: 40px; color: #797d80">
-                        {{ obj.title|slice:"15" }}</h1>
-                    <i class="bi bi-clock" style="position: absolute; top: 100px; left: -10px; font-size: 20px"></i>
-                    <span style="position: absolute;top: 103px; left: 30px; color: #a4a6a8">{{ obj.created_at|timesince }} ago</span>
-                </div>
-                <div style="position: relative">
-                    <span class="vl"></span>
-                    <img src="{{ obj.qr_img.url }}" width="140px" height="140px"
-                         style="position: absolute; right: 200px; top: 7px">
-                    <a href="{{ obj.qr_img.url }}" download>
-                        <button class="xm" style="width: 170px; border: 1px #eaeaea solid; outline: gray; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;background-color: transparent;color: #47bdef; padding: 6px 12px; position: absolute; right: 20px; top: 45px;
-                            <i class=" bi bi-download
-                        "></i> DOWNLOAD <br>JPEG</button>
-                    </a>
-                </div>
+        <div class="container bg-white shadow-sm mb-5" style="height: 152px; width: 1000px;">
+            <div class="container2" style="width: 700px; position: relative">
+                <span style="font-size: 12px; margin-left: 35px; color: #d4d4d4; position: absolute; top: 20px">text & url</span>
+                <i class="bi bi-layout-text-window-reverse mt-5"
+                   style="font-size: 24px; position: absolute; top: 2px; left: -10px"></i>
+                <h1 style="width: 400px; margin-left: 30px; position: absolute; top: 40px; color: #797d80">
+                    {{ obj.title|slice:"15" }}</h1>
+                <i class="bi bi-clock" style="position: absolute; top: 100px; left: -10px; font-size: 20px"></i>
+                <span style="position: absolute;top: 103px; left: 30px; color: #a4a6a8">{{ obj.created_at|timesince }} {% trans 'ago' %} </span>
             </div>
-            {% empty %}
-            <h1 class="d-flex justify-content-center mt-5 mb-5"
-                style="margin-top: 150px!important; font-family: 'Mogra', cursive;">Sorry
-                you don't have any scans!</h1>
+            <div style="position: relative">
+                <span class="vl"></span>
+                <img src="{{ obj.qr_img.url }}" width="140px" height="140px"
+                     style="position: absolute; right: 200px; top: 7px">
+                <a href="{{ obj.qr_img.url }}" download>
+                    <button class="xm" style="width: 170px; border: 1px #eaeaea solid; outline: gray; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;background-color: transparent;color: #47bdef; padding: 6px 12px; position: absolute; right: 20px; top: 45px;
+                            <i class=" bi bi-download
+                    "></i> {% trans 'DOWNLOAD' %} <br>JPEG</button>
+                </a>
+            </div>
+        </div>
+        {% empty %}
+        <h1 class="d-flex justify-content-center mt-5 mb-5"
+            style="margin-top: 150px!important; font-family: 'Mogra', cursive;"> {% trans 'Sorry you dont have any scans!' %}</h1>
         {% endfor %}
         <nav aria-label="Page navigation example" class="container d-flex justify-content-xxl-center">
             <ul class="pagination">

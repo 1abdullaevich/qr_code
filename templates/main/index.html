@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html' %}
 {% load i18n %}
 {% block title %}
-    Create Your Own Qr Code
+    {% trans 'Create Your Own Qr Code' %}
 {% endblock %}
 {% block style %}
     <style>
@@ -173,14 +173,14 @@
             </div>
             <div class="part1 ms-auto mt-5 shadow-lg main2">
                 <div class="icon-btn mt-5 ms-5">
-                    <h1 class="part3">Create and share any Qr Codes you want !</h1>
+                    <h1 class="part3">{% trans 'Create and share any Qr Codes you want !' %}</h1>
                 </div>
                 <form method="post" class="ms-5" style="margin-top: 50px; width: 645px;">
                     {% csrf_token %}
                     <textarea type="text" class="input1" name="data" id="data"
                               style="border: none; outline: none; margin-top: 15px; resize: none"
                               placeholder="Enter any text url of web site for generating"></textarea>
-                    <button class="generate">Generate</button>
+                    <button class="generate">{% trans 'Generate' %}</button>
                 </form>
             </div>
             <div class="part2 mt-5 shadow-lg">
@@ -191,7 +191,7 @@
                             <a href="/media/{{ img_name }}" download>
                                 <button
                                         style="width: 300px; border: none; outline: none; margin-top: 20px;font-family: 'Source Sans Pro', sans-serif; font-weight: 600;border-radius: 15px;background-color: #90c52d;color: #fff; margin: 0; padding: 6px 12px;">
-                                    <i class="bi bi-download"></i> DOWNLOAD <br>JPEG
+                                    <i class="bi bi-download"></i> {% trans 'DOWNLOAD' %} <br>JPEG
                                 </button>
                             </a>
                         </div>
@@ -203,7 +203,7 @@
                             <a href="/media/{{ img_name }}" download>
                                 <button disabled
                                         style="width: 300px; opacity: 0.4; filter: alpha(opacity=40); background-color: #000; border: none; outline: none; margin-top: 20px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;border-radius: 15px;background-color: #90c52d;color: #fff; margin: 0; padding: 6px 12px;">
-                                    <i class="bi bi-download"></i> DOWNLOAD <br>JPEG
+                                    <i class="bi bi-download"></i> {% trans 'DOWNLOAD' %} <br>JPEG
                                 </button>
                             </a>
                         </div>
@@ -212,18 +212,18 @@
             </div>
         </main>
     </section>
-{#    <section style="background-color: #f7f8f9; height: 140vh">#}
-{#        <div style="position: relative">#}
-{#            <h1 class="d-flex justify-content-center"#}
-{#                style="font-family: 'Mogra', cursive; position: absolute; top: 50px; left: 26%;">I’m new to QR Codes. What should I#}
-{#                know?</h1>#}
-{#            <h3 class=" d-flex justify-content-center" style="font-family: 'Mogra'; position: absolute; top: 120px; left: 27%;">Glad you asked! Here’s a few#}
-{#                basics to get you started.</h3>#}
-{#        </div>#}
-{#        <div style="position: relative">#}
-{#            <img src="https://www.qr-code-generator.com/wp-content/themes/qr/new_structure/assets/media/images/startpage/v2/hand-qrcodes.png" width="635px" height="800px" style="position: absolute; top: 200px; left: 13%">#}
-{#        </div>#}
-{#    </section>#}
+    {#    <section style="background-color: #f7f8f9; height: 140vh">#}
+    {#        <div style="position: relative">#}
+    {#            <h1 class="d-flex justify-content-center"#}
+    {#                style="font-family: 'Mogra', cursive; position: absolute; top: 50px; left: 26%;">I’m new to QR Codes. What should I#}
+    {#                know?</h1>#}
+    {#            <h3 class=" d-flex justify-content-center" style="font-family: 'Mogra'; position: absolute; top: 120px; left: 27%;">Glad you asked! Here’s a few#}
+    {#                basics to get you started.</h3>#}
+    {#        </div>#}
+    {#        <div style="position: relative">#}
+    {#            <img src="https://www.qr-code-generator.com/wp-content/themes/qr/new_structure/assets/media/images/startpage/v2/hand-qrcodes.png" width="635px" height="800px" style="position: absolute; top: 200px; left: 13%">#}
+    {#        </div>#}
+    {#    </section>#}
     {% block script %}
     {% endblock %}
 {% endblock %}
