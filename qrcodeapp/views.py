@@ -49,3 +49,7 @@ def dashboard_view(request):
 
 def page_not_found_404(request, exception):
     return render(request, 'layouts/page_not_found.html', status=404)
+
+
+def about_us_view(request):
+    return render(request, 'main/about-us.html')

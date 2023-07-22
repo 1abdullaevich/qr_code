@@ -1,31 +1,32 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from .models import UserModel
+from django.utils.translation import gettext_lazy as _
 
 
 class RegistrationForm(forms.Form):
-    username = forms.CharField(max_length=16, min_length=3, widget=forms.TextInput(attrs={
-        'placeholder': 'Enter your username'
+    username = forms.CharField(max_length=16, label=_("Username"), min_length=3, widget=forms.TextInput(attrs={
+        'placeholder': _('Enter your username')
     }))
     email = forms.EmailField(widget=forms.EmailInput(attrs={
-        'placeholder': 'youremailname@example.com'
+        'placeholder': _('youremailname@example.com')
     }))
-    first_name = forms.CharField(max_length=25)
-    last_name = forms.CharField(max_length=25)
-    password = forms.CharField(max_length=16, min_length=5, widget=forms.PasswordInput)
-    confirm_password = forms.CharField(max_length=16, min_length=5, widget=forms.PasswordInput)
+    first_name = forms.CharField(max_length=25, label=_("First_name"))
+    last_name = forms.CharField(max_length=25, label=_('Last_name'))
+    password = forms.CharField(max_length=16, min_length=5, widget=forms.PasswordInput, label=_("Password"))
+    confirm_password = forms.CharField(max_length=16, min_length=5, widget=forms.PasswordInput, label=_("Confirm password"))
 
     def clean_confirm_password(self):
         if self.cleaned_data['password'] != self.cleaned_data['confirm_password']:
-            raise ValidationError('Passwords are not the same!', 'confirm_password')
+            raise ValidationError(_('Passwords are not the same!', 'confirm_password'))
         return self.cleaned_data
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=20, widget=forms.TextInput(attrs={
+    username = forms.CharField(max_length=20, label=_("Username"), widget=forms.TextInput(attrs={
         'placeholder': 'username'
     }))
-    password = forms.CharField(max_length=16, min_length=6, widget=forms.PasswordInput(attrs={
+    password = forms.CharField(max_length=16, label=_("Password"), min_length=6, widget=forms.PasswordInput(attrs={
         'placeholder': 'Enter your password'
     }))
 

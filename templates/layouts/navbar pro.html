@@ -7,16 +7,16 @@
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" style="position: absolute; left: 1500px">
                 <a class="nav-link dropdown-toggle"
-                   style="color: #00BBFF; font-size: 24px; font-weight: 600; font-family: 'Source Sans Pro', sans-serif; margin-left: 1050px"
+                   style="color: #00BBFF; font-size: 24px; font-weight: 600; font-family: 'Source Sans Pro', sans-serif"
                    href="#" role="button"
                    data-bs-toggle="dropdown"
                    aria-expanded="false">
                     <i class="bi bi-person-circle"></i> Account
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="{% url 'qrcode:about_us' %}">About us</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li>
                         <hr class="dropdown-divider">

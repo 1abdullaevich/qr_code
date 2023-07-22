@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
 from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 
 
 def registration_view(request):
@@ -36,7 +37,7 @@ def login_view(request):
                 login(request, user)
                 messages.info(request, f"{user.username} welcome !")
                 return redirect('qrcode:qr_gen')
-            form.add_error('password', 'Password or username is incorrect!')
+            form.add_error('password', _('Password or username is incorrect!'))
     return render(request, 'main/login.html', context={
         'login_form': form
     })

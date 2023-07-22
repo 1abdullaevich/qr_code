@@ -1,4 +1,5 @@
 {% extends 'layouts/base.html' %}
+{% load i18n %}
 {% block title %}
     Login
 {% endblock %}
@@ -9,13 +10,13 @@
             <div class="col-6 offset-3">
                 <div class="card">
                     <div class="card-header bg-dark text-white">
-                        Login
+                        {% trans 'Login' %}
                     </div>
                     <div class="card-body">
                         <form action="{% url 'login' %}" method="post">
                             {% csrf_token %}
                             {{ login_form|crispy }}
-                            <button class="btn btn-success px-5 py-2">Save</button>
+                            <button class="btn btn-success px-5 py-2">{% trans "Save" %}</button>
                         </form>
                     </div>
                 </div>

@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap-icons/font/bootstrap-icons.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-    <link rel="icon" href="{% static 'main/img/logo-icon-blue.svg' %}">
+    <link rel="icon"
+          href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMDBCRkZGO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTYuOCwxNVY5YzAtMS4yLDEtMi4yLDIuMi0yLjJIMTVjMS4yLDAsMi4yLDEsMi4yLDIuMnY4LjJsMCwwSDlDNy44LDE3LjIsNi44LDE2LjIsNi44LDE1CglDNi44LDE1LDYuOCwxNSw2LjgsMTV6Ii8+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNi41LDMuNGMyLjMsMCw0LjEsMS44LDQuMSw0LjF2MTNoLTEzYy0yLjMsMC00LjEtMS44LTQuMS00LjFWNy41YzAtMi4zLDEuOC00LjEsNC4xLTQuMUgxNi41IE0xNi41LDBINy41CglDMy40LDAsMCwzLjQsMCw3LjV2OC45QzAsMjAuNiwzLjQsMjQsNy41LDI0SDI0VjcuNUMyNCwzLjQsMjAuNiwwLDE2LjUsMEwxNi41LDB6Ii8+Cjwvc3ZnPgo=">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@500&display=swap" rel="stylesheet">
@@ -281,15 +282,17 @@
         <button class="create" href="{% url 'qrcode:qr_gen' %}">+ CREATE QR CODE</button>
     </a>
     <div>
+        {{ objs.count }}
         {% for obj in objs.object_list %}
             <div class="container bg-white shadow-sm mb-5" style="height: 152px; width: 1000px;">
                 <div class="container2" style="width: 700px; position: relative">
                     <span style="font-size: 12px; margin-left: 35px; color: #d4d4d4; position: absolute; top: 20px">text & url</span>
                     <i class="bi bi-layout-text-window-reverse mt-5"
                        style="font-size: 24px; position: absolute; top: 2px; left: -10px"></i>
-                    <h1 style="width: 400px; margin-left: 30px; position: absolute; top: 40px; color: #797d80">{{ obj.title }}</h1>
+                    <h1 style="width: 400px; margin-left: 30px; position: absolute; top: 40px; color: #797d80">
+                        {{ obj.title|slice:"15" }}</h1>
                     <i class="bi bi-clock" style="position: absolute; top: 100px; left: -10px; font-size: 20px"></i>
-                    <span style="position: absolute;top: 103px; left: 30px; color: #a4a6a8">{{ obj.created_at }}</span>
+                    <span style="position: absolute;top: 103px; left: 30px; color: #a4a6a8">{{ obj.created_at|timesince }} ago</span>
                 </div>
                 <div style="position: relative">
                     <span class="vl"></span>
@@ -303,8 +306,9 @@
                 </div>
             </div>
             {% empty %}
-            <h1 class="d-flex justify-content-center mt-5 mb-5" style="margin-top: 150px!important; font-family: 'Mogra', cursive;">Sorry
-                you dont have any scans!</h1>
+            <h1 class="d-flex justify-content-center mt-5 mb-5"
+                style="margin-top: 150px!important; font-family: 'Mogra', cursive;">Sorry
+                you don't have any scans!</h1>
         {% endfor %}
         <nav aria-label="Page navigation example" class="container d-flex justify-content-xxl-center">
             <ul class="pagination">
