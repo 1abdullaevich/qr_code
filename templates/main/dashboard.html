@@ -273,7 +273,7 @@
     {% include 'layouts/navbar pro.html' %}
     <form class="d-flex" role="search" method="get" style="position: absolute; top:120px; left: 860px">
         <input class="form-control input1" style="width: 200px; height: 42.5px" type="search"
-               placeholder="Enter Qr Code Title"
+               placeholder=" {% trans "Enter Qr Code Title" %}"
                aria-label="Search"
                value="{{ q }}"
                name="q">
@@ -320,9 +320,7 @@
                     </li>
                 {% endif %}
                 {% for stuff in stuffs.page_range %}
-                    <li class="page-item {% if objs.number == stuff %}active{% endif %} "><a class="page-link"
-                                                                                             href="{% url 'qrcode:dashboard' %}?page={{ stuff }}">{{ stuff }}</a>
-                    </li>
+                    <li class="page-item {% if objs.number == stuff %}active{% endif %}"><a class="page-link" href="{% url 'qrcode:dashboard' %}?page={{ stuff }}">{{ stuff }}</a></li>
                 {% endfor %}
                 {% if objs.has_next %}
                     <li class="page-item">

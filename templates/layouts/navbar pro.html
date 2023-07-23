@@ -1,12 +1,13 @@
 {% load static %}
 {% load i18n %}
+{% get_current_language as lang %}
+{% get_available_languages as lans %}
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm dashboardnav" style="background-color: white;">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'qrcode:qr_gen' %}">
             <img src="{% static 'main/img/Screenshot from 2023-07-09 01-28-50.png' %}" width="400px" height="80px"
                  style="margin-top: -14.5px; margin-left: -5px">
         </a>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <li class="nav-item dropdown" style="position: absolute; left: 1500px">
                 <a class="nav-link dropdown-toggle"
@@ -17,18 +18,18 @@
                     <i class="bi bi-person-circle"></i> {% trans 'Account' %}
                 </a>
                 <ul class="dropdown-menu">
+                    {% for lan in lans %}
+                        <li class="page-item {% if lan.0 == lang %}bg-info{% endif %}"><a class="dropdown-item" href="/{{ lan.0 }}/{{ request.path|slice:"4:" }}">{{ lan.1 }}</a></li>
+                    {% endfor %}
+                    <hr class="dropdown-divider">
                     <li><a class="dropdown-item" href="{% url 'qrcode:about_us' %}">{% trans "About us" %}</a></li>
-                    <li><a class="dropdown-item" href="#">{% trans 'Another action' %}</a></li>
+                    <li><a class="dropdown-item"
+                           href="https://www.qr-code-generator.com/company/privacy-policy/">{% trans "Copyright" %}</a>
+                    </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li class="nav-item dropend">
-                        <a class="nav-link dropdown-toggle" href="{% url 'logout' %}" role="button"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            {% trans 'Log-out' %}
-                        </a>
-                    </li>
+                    <li><a class="dropdown-item text-danger" href="{% url 'logout' %}">{% trans "LOg-out" %}</a></li>
                 </ul>
             </li>
         </div>

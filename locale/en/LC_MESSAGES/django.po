@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-22 18:29+0500\n"
+"POT-Creation-Date: 2023-07-22 20:35+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,41 +26,45 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: templates/layouts/navbar pro.html:17
+#: templates/layouts/navbar pro.html:19
 msgid "Account"
 msgstr ""
 
-#: templates/layouts/navbar pro.html:20 templates/layouts/navbar.html:54
+#: templates/layouts/navbar pro.html:27 templates/layouts/navbar.html:59
 msgid "About us"
 msgstr ""
 
-#: templates/layouts/navbar pro.html:21
-msgid "Another action"
+#: templates/layouts/navbar pro.html:29 templates/layouts/navbar.html:60
+msgid "Copyright"
 msgstr ""
 
-#: templates/layouts/navbar pro.html:29 templates/layouts/navbar.html:35
-msgid "Log-out"
+#: templates/layouts/navbar pro.html:34
+msgid "LOg-out"
 msgstr ""
 
-#: templates/layouts/navbar.html:15 templates/main/login.html:4
+#: templates/layouts/navbar.html:17 templates/main/login.html:4
 #: templates/main/login.html:13
 msgid "Login"
 msgstr ""
 
-#: templates/layouts/navbar.html:23
+#: templates/layouts/navbar.html:25
 msgid "Sign-up"
 msgstr ""
 
-#: templates/layouts/navbar.html:41 templates/main/dashboard.html:7
+#: templates/layouts/navbar.html:37
+msgid "Log-out"
+msgstr ""
+
+#: templates/layouts/navbar.html:43 templates/main/dashboard.html:7
 msgid "Dashboard"
 msgstr ""
 
-#: templates/layouts/navbar.html:50
+#: templates/layouts/navbar.html:52
 msgid "MORE INFORMATION"
 msgstr ""
 
-#: templates/layouts/navbar.html:55
-msgid "Copyright"
+#: templates/main/dashboard.html:276
+msgid "Enter Qr Code Title"
 msgstr ""
 
 #: templates/main/dashboard.html:280
