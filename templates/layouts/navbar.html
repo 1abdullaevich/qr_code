@@ -39,7 +39,7 @@
                     </a>
 
                     <a href="{% url 'qrcode:dashboard' %}">
-                        <button style="background-color: #00BBFF; color: white; font-weight: 600; width: 140px; height: 43px; border-radius: 100px; border: none; margin-right: 15px">
+                        <button style="background-color: #00BBFF; color: white; font-weight: 600; width: 140px; height: 43px; border-radius: 100px; border: none; margin-right: 15px; font-size: 18px">
                             {% trans 'Dashboard' %}
                         </button>
                     </a>
@@ -61,7 +61,7 @@
                     <hr class="dropdown-menu-start">
                     <li><a class="dropdown-item" href="{% url 'qrcode:about_us' %}">{% trans "About us" %}</a></li>
                     <li><a class="dropdown-item"
-                           href="https://www.qr-code-generator.com/company/privacy-policy/">{% trans "Copyright" %}</a>
+                           href="{% url 'qrcode:privacy' %}">{% trans "Copyright" %}</a>
                     </li>
                 </ul>
             </div>

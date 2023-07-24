@@ -10,6 +10,7 @@ handler404 = 'qrcodeapp.views.page_not_found_404'
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
+    # path('accounts/', include('allauth.urls')),
     path('', include('qrcodeapp.urls')),
     path('', include('user.urls')),
 )

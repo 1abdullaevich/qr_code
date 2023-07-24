@@ -54,3 +54,7 @@ def page_not_found_404(request, exception):
 
 def about_us_view(request):
     return render(request, 'main/about-us.html')
+
+
+def privacy_view(request):
+    return render(request, 'main/privacy.html')
