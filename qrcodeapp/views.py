@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.conf import settings
 from qrcode import *
 from user.models import DashboardModel
@@ -39,10 +39,12 @@ def dashboard_view(request):
     get_page = request.GET.get('page', 1)
     stuff = Paginator(objs, 2)
     page = stuff.page(get_page)
+    print(q)
     if q:
         objs = objs.filter(title__icontains=q)
     return render(request, 'main/dashboard.html', context={
         'objs': page,
+        'count': objs,
         'stuffs': stuff,
         'q': q
     })

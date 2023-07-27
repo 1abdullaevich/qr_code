@@ -217,14 +217,29 @@
             width: 150px;
             border: 0;
             background: #90c52d;
+            margin-left: 20px !important;
+        }
+
+        .active1 {
+            width: 250px !important;
             position: absolute;
-            left: 100px !important;
+            font-size: 16px;
+            font-weight: 600;
+            color: #797d80;
+            left: 345px;
+            font-family: Source Sans Pro, sans-serif;
+            bottom: 15px;
+            top: 127px;
+        }
+
+        .active1 > i {
+            font-size: 20px;
+            margin-right: 10px;
         }
 
         .input1 {
             width: 200px;
-            position: absolute;
-            left: -115px;
+            margin-left: -120px;
             height: 42.5px !important;
             border-radius: 2px;
         }
@@ -271,67 +286,72 @@
 <body>
 <section style="background-color: #f7f7f7; width: 100%; padding-bottom: 40px">
     {% include 'layouts/navbar pro.html' %}
-    <form class="d-flex" role="search" method="get" style="position: absolute; top:120px; left: 860px">
-        <input class="form-control input1" style="width: 200px; height: 42.5px" type="search"
-               placeholder=" {% trans "Enter Qr Code Title" %}"
-               aria-label="Search"
-               value="{{ q }}"
-               name="q">
-        <button class="save" style="height: 42.5px " type="submit">{% trans 'Search' %}</button>
-    </form>
+    {% if count|length > 2 %}
+        <form class="d-flex" role="search" method="get" style="position: absolute; top:120px; left: 860px">
+            <input class="form-control input1" style="width: 200px; height: 42.5px" type="search"
+                   placeholder="{% trans "Enter Qr Code Title" %}" value="{{ q }}" name="q">
+            <button class="save" style="height: 42.5px " type="submit">{% trans 'Search' %}</button>
+        </form>
+    {% endif %}
     <a href="{% url 'qrcode:qr_gen' %}">
         <button class="create" href="{% url 'qrcode:qr_gen' %}">{% trans '+ CREATE QR CODE' %}</button>
     </a>
     <div>
-        {{ objs.count }}
+        <span class="active1 container"><i
+                class="bi bi-exclamation-triangle-fill"></i>{% trans 'Active Qr Codes' %} ({{ count|length }})</span>
         {% for obj in objs.object_list %}
-        <div class="container bg-white shadow-sm mb-5" style="height: 152px; width: 1000px;">
-            <div class="container2" style="width: 700px; position: relative">
-                <span style="font-size: 12px; margin-left: 35px; color: #d4d4d4; position: absolute; top: 20px">text & url</span>
-                <i class="bi bi-layout-text-window-reverse mt-5"
-                   style="font-size: 24px; position: absolute; top: 2px; left: -10px"></i>
-                <h1 style="width: 400px; margin-left: 30px; position: absolute; top: 40px; color: #797d80">
-                    {{ obj.title|slice:"15" }}</h1>
-                <i class="bi bi-clock" style="position: absolute; top: 100px; left: -10px; font-size: 20px"></i>
-                <span style="position: absolute;top: 103px; left: 30px; color: #a4a6a8">{{ obj.created_at|timesince }} {% trans 'ago' %} </span>
-            </div>
-            <div style="position: relative">
-                <span class="vl"></span>
-                <img src="{{ obj.qr_img.url }}" width="140px" height="140px"
-                     style="position: absolute; right: 200px; top: 7px">
-                <a href="{{ obj.qr_img.url }}" download>
-                    <button class="xm" style="width: 170px; border: 1px #eaeaea solid; outline: gray; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;background-color: transparent;color: #47bdef; padding: 6px 12px; position: absolute; right: 20px; top: 45px;
+            <div class="container bg-white shadow-sm mb-5" style="height: 152px; width: 1000px;">
+                <div class="container2" style="width: 700px; position: relative">
+                    <span style="font-size: 12px; margin-left: 35px; color: #d4d4d4; position: absolute; top: 20px">text & url</span>
+                    <i class="bi bi-layout-text-window-reverse mt-5"
+                       style="font-size: 24px; position: absolute; top: 2px; left: -10px"></i>
+                    <h1 style="width: 400px; margin-left: 30px; position: absolute; top: 40px; color: #797d80">
+                        {{ obj.title|slice:"15" }}</h1>
+                    <i class="bi bi-clock" style="position: absolute; top: 100px; left: -10px; font-size: 20px"></i>
+                    <span style="position: absolute;top: 103px; left: 30px; color: #a4a6a8">{{ obj.created_at|timesince }} {% trans 'ago' %} </span>
+                </div>
+                <div style="position: relative">
+                    <span class="vl"></span>
+                    <img src="{{ obj.qr_img.url }}" width="140px" height="140px"
+                         style="position: absolute; right: 200px; top: 7px">
+                    <a href="{{ obj.qr_img.url }}" download>
+                        <button class="xm" style="width: 170px; border: 1px #eaeaea solid; outline: gray; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;background-color: transparent;color: #47bdef; padding: 6px 12px; position: absolute; right: 20px; top: 45px;
                             <i class=" bi bi-download
-                    "></i> {% trans 'DOWNLOAD' %} <br>JPEG</button>
-                </a>
+                        "></i> {% trans 'DOWNLOAD' %} <br>JPEG</button>
+                    </a>
+                </div>
             </div>
-        </div>
-        {% empty %}
-        <h1 class="d-flex justify-content-center mt-5 mb-5"
-            style="margin-top: 150px!important; font-family: 'Mogra', cursive;"> {% trans 'Sorry you dont have any scans!' %}</h1>
+            {% empty %}
+            <h1 class="d-flex justify-content-center mt-5 mb-5"
+                style="margin-top: 150px!important; font-family: 'Mogra', cursive;"> {% trans 'Sorry you dont have any scans!' %}</h1>
         {% endfor %}
-        <nav aria-label="Page navigation example" class="container d-flex justify-content-xxl-center">
-            <ul class="pagination">
-                {% if objs.has_previous %}
-                    <li class="page-item ">
-                        <a class="page-link" href="{% url 'qrcode:dashboard' %}?page={{ objs.previous_page_number }}"
-                           aria-label="Previous"><span aria-hidden="true">&laquo</span>
-                        </a>
-                    </li>
-                {% endif %}
-                {% for stuff in stuffs.page_range %}
-                    <li class="page-item {% if objs.number == stuff %}active{% endif %}"><a class="page-link" href="{% url 'qrcode:dashboard' %}?page={{ stuff }}">{{ stuff }}</a></li>
-                {% endfor %}
-                {% if objs.has_next %}
-                    <li class="page-item">
-                        <a class="page-link" href="{% url 'qrcode:dashboard' %}?page={{ objs.next_page_number }}"
-                           aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                {% endif %}
-            </ul>
-        </nav>
+        {% if count|length > 2 %}
+            <nav aria-label="Page navigation example" class="container d-flex justify-content-xxl-center">
+                <ul class="pagination">
+                    {% if objs.has_previous %}
+                        <li class="page-item ">
+                            <a class="page-link"
+                               href="{% url 'qrcode:dashboard' %}?page={{ objs.previous_page_number }}"
+                               aria-label="Previous"><span aria-hidden="true">&laquo</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% for stuff in stuffs.page_range %}
+                        <li class="page-item {% if objs.number == stuff %}active{% endif %}"><a class="page-link"
+                                                                                                href="{% url 'qrcode:dashboard' %}?page={{ stuff }}">{{ stuff }}</a>
+                        </li>
+                    {% endfor %}
+                    {% if objs.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="{% url 'qrcode:dashboard' %}?page={{ objs.next_page_number }}"
+                               aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
     </div>
 </section>
 
