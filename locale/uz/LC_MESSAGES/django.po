@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-27 13:00+0500\n"
+"POT-Creation-Date: 2023-07-27 14:13+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: core/settings.py:128
+#: core/settings.py:129
 msgid "Uzbek"
 msgstr "Uzbek"
 
-#: core/settings.py:129
+#: core/settings.py:130
 msgid "English"
 msgstr "Inglis"
 
@@ -101,6 +101,10 @@ msgstr "Shaxsiy Qr kod yasang"
 #: templates/main/index.html:172
 msgid "Create and share any Qr Codes you want !"
 msgstr "O'zingiz xohlagan Qr kodlarini yarating"
+
+#: templates/main/index.html:178
+msgid "Enter any text url of web site for generating"
+msgstr "yaratish uchun istalgan webning url manzilini kiriting"
 
 #: templates/main/index.html:179
 msgid "Generate"

@@ -175,7 +175,7 @@
                     {% csrf_token %}
                     <textarea type="text" class="input1" name="data" id="data"
                               style="border: none; outline: none; margin-top: 15px; resize: none"
-                              placeholder="Enter any text url of web site for generating"></textarea>
+                              placeholder={% trans "Enter any text url of web site for generating" %}></textarea>
                     <button class="generate">{% trans 'Generate' %}</button>
                 </form>
             </div>
