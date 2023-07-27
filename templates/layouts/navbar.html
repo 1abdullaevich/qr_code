@@ -13,7 +13,7 @@
             {% if not request.user.is_authenticated %}
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item login">
-                        <a class="nav-link" style="color: #0a53be; text-decoration: transparent;"
+                        <a class="nav-link" style="color: #0a53be; text-decoration: transparent; font-family: 'Source Sans Pro', sans-serif; font-weight: 600"
                            href="{% url 'login' %}">{% trans 'Login' %}</a>
                     </li>
                     <a href="{% url 'registration' %}">

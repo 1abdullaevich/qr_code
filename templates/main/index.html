@@ -56,6 +56,8 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             background-color: #eee;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
 
         }
 
@@ -128,6 +130,7 @@
             font-family: 'Mogra', cursive;
             font-weight: 500;
             width: 645px;
+            color: #797d80;
         }
 
         .sticky {
@@ -175,7 +178,7 @@
                     {% csrf_token %}
                     <textarea type="text" class="input1" name="data" id="data"
                               style="border: none; outline: none; margin-top: 15px; resize: none"
-                              placeholder={% trans "Enter any text url of web site for generating" %}></textarea>
+                              placeholder="Enter any text url of web site for generating"></textarea>
                     <button class="generate">{% trans 'Generate' %}</button>
                 </form>
             </div>
@@ -208,18 +211,6 @@
             </div>
         </main>
     </section>
-    {#    <section style="background-color: #f7f8f9; height: 140vh">#}
-    {#        <div style="position: relative">#}
-    {#            <h1 class="d-flex justify-content-center"#}
-    {#                style="font-family: 'Mogra', cursive; position: absolute; top: 50px; left: 26%;">I’m new to QR Codes. What should I#}
-    {#                know?</h1>#}
-    {#            <h3 class=" d-flex justify-content-center" style="font-family: 'Mogra'; position: absolute; top: 120px; left: 27%;">Glad you asked! Here’s a few#}
-    {#                basics to get you started.</h3>#}
-    {#        </div>#}
-    {#        <div style="position: relative">#}
-    {#            <img src="https://www.qr-code-generator.com/wp-content/themes/qr/new_structure/assets/media/images/startpage/v2/hand-qrcodes.png" width="635px" height="800px" style="position: absolute; top: 200px; left: 13%">#}
-    {#        </div>#}
-    {#    </section>#}
     {% block script %}
     {% endblock %}
 {% endblock %}

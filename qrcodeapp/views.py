@@ -28,7 +28,7 @@ def qr_gen_view(request):
             img_name = f'qr_{time.time()}.png'
             img.save(settings.MEDIA_ROOT / img_name)
             print(img)
-        return render(request, 'main/index.html', {'img_name': img_name})
+        return render(request, 'main/index.html', context={'img_name': img_name, "data": data})
     return render(request, 'main/index.html')
 
 

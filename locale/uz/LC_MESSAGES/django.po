@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-27 14:13+0500\n"
+"POT-Creation-Date: 2023-07-27 15:16+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,10 +101,6 @@ msgstr "Shaxsiy Qr kod yasang"
 #: templates/main/index.html:172
 msgid "Create and share any Qr Codes you want !"
 msgstr "O'zingiz xohlagan Qr kodlarini yarating"
-
-#: templates/main/index.html:178
-msgid "Enter any text url of web site for generating"
-msgstr "yaratish uchun istalgan webning url manzilini kiriting"
 
 #: templates/main/index.html:179
 msgid "Generate"
@@ -1376,3 +1372,6 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/modeltranslation/widgets.py:24
 msgid "None"
 msgstr ""
+
+#~ msgid "Enter any text url of web site for generating"
+#~ msgstr " uchun istalgan webning url manzilini kiriting"
