@@ -287,15 +287,10 @@
 <section style="background-color: #f7f7f7; width: 100%; padding-bottom: 40px">
     {% include 'layouts/navbar pro.html' %}
     {% if count|length > 2 %}
-        <form class="d-flex" role="search" method="get" style="position: absolute; top:120px; left: 860px">
-            <input class="form-control input1" style="width: 200px; height: 42.5px" type="search"
-                   placeholder="{% trans "Enter Qr Code Title" %}" value="{{ q }}" name="q">
-            <button class="save" style="height: 42.5px " type="submit">{% trans 'Search' %}</button>
-        </form>
     {% endif %}
-    <a href="{% url 'qrcode:qr_gen' %}">
-        <button class="create" href="{% url 'qrcode:qr_gen' %}">{% trans '+ CREATE QR CODE' %}</button>
-    </a>
+    <button class="create">
+        <a href="{% url 'qrcode:qr_gen' %}" style="padding: 0!important; width: 220px!important;">{% trans '+ CREATE QR CODE' %}</a>
+    </button>
     <div>
         <span class="active1 container"><i
                 class="bi bi-exclamation-triangle-fill"></i>{% trans 'Active Qr Codes' %} ({{ count|length }})</span>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-27 15:16+0500\n"
+"POT-Creation-Date: 2023-07-27 23:47+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,72 @@ msgstr "Uzbek"
 #: core/settings.py:130
 msgid "English"
 msgstr "Inglis"
+
+#: templates/layouts/footer.html:7
+msgid "Get connected with us on social networks:"
+msgstr "Ijtimoiy tarmoqlarda biz bilan bog'laning:"
+
+#: templates/layouts/footer.html:45
+msgid "A service provided by"
+msgstr "tomonidan taqdim etilgan xizmat"
+
+#: templates/layouts/footer.html:52
+msgid "Made with in"
+msgstr "bilan yaratilgan"
+
+#: templates/layouts/footer.html:61
+msgid "Products"
+msgstr "Materialar"
+
+#: templates/layouts/footer.html:64
+msgid "Pro Features"
+msgstr "Pro xususiyatlari"
+
+#: templates/layouts/footer.html:67
+msgid "Qr code types"
+msgstr "Qr kod turlari"
+
+#: templates/layouts/footer.html:70
+msgid "Pricing"
+msgstr "Narx-navo"
+
+#: templates/layouts/footer.html:73
+msgid "Customers"
+msgstr "Xaridorlar"
+
+#: templates/layouts/footer.html:82
+msgid "Useful links"
+msgstr "Foydali havolalar"
+
+#: templates/layouts/footer.html:85
+msgid "What is qr codes"
+msgstr "Qr kodlari nima"
+
+#: templates/layouts/footer.html:88
+msgid "Qr codes in marketing"
+msgstr "Marketingda Qr kodlari"
+
+#: templates/layouts/footer.html:91
+msgid "Qr codes on materials"
+msgstr "Materiallar bo'yicha Qr kodlari"
+
+#: templates/layouts/footer.html:94
+msgid "Qr codes for business"
+msgstr "Biznes uchunu qr kodlar"
+
+#: templates/layouts/footer.html:102
+msgid "Contacts"
+msgstr "Aloqa"
+
+#: templates/layouts/footer.html:120
+#, fuzzy
+#| msgid "Copyright"
+msgid "Copyright:"
+msgstr "Avtorski"
+
+#: templates/layouts/footer.html:121
+msgid "Qr Code Generator"
+msgstr "Qr kod generatori"
 
 #: templates/layouts/navbar pro.html:18
 msgid "Account"
@@ -66,31 +132,23 @@ msgid "MORE INFORMATION"
 msgstr "Koproq info"
 
 #: templates/main/dashboard.html:292
-msgid "Enter Qr Code Title"
-msgstr "Qr kod nomini kiriting"
-
-#: templates/main/dashboard.html:293
-msgid "Search"
-msgstr "Qidirish"
-
-#: templates/main/dashboard.html:297
 msgid "+ CREATE QR CODE"
 msgstr "+ QR kod yasash"
 
-#: templates/main/dashboard.html:301
+#: templates/main/dashboard.html:296
 msgid "Active Qr Codes"
 msgstr "Faol Qr kodlari"
 
-#: templates/main/dashboard.html:311
+#: templates/main/dashboard.html:306
 msgid "ago"
 msgstr "oldin"
 
-#: templates/main/dashboard.html:320 templates/main/index.html:190
-#: templates/main/index.html:202
+#: templates/main/dashboard.html:315 templates/main/index.html:193
+#: templates/main/index.html:205
 msgid "DOWNLOAD"
 msgstr "Otqazish"
 
-#: templates/main/dashboard.html:326
+#: templates/main/dashboard.html:321
 msgid "Sorry you dont have any scans!"
 msgstr "Kechirasiz, sizda hech qanday skaner yo'q!"
 
@@ -98,11 +156,11 @@ msgstr "Kechirasiz, sizda hech qanday skaner yo'q!"
 msgid "Create Your Own Qr Code"
 msgstr "Shaxsiy Qr kod yasang"
 
-#: templates/main/index.html:172
+#: templates/main/index.html:175
 msgid "Create and share any Qr Codes you want !"
 msgstr "O'zingiz xohlagan Qr kodlarini yarating"
 
-#: templates/main/index.html:179
+#: templates/main/index.html:182
 msgid "Generate"
 msgstr "Yaratish"
 
@@ -1372,6 +1430,12 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/modeltranslation/widgets.py:24
 msgid "None"
 msgstr ""
+
+#~ msgid "Enter Qr Code Title"
+#~ msgstr "Qr kod nomini kiriting"
+
+#~ msgid "Search"
+#~ msgstr "Qidirish"
 
 #~ msgid "Enter any text url of web site for generating"
 #~ msgstr " uchun istalgan webning url manzilini kiriting"

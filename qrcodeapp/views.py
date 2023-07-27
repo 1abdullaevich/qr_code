@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 import time
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
+# from user.filters import DashboardFilter
 
 
 def qr_gen_view(request):
@@ -34,19 +35,22 @@ def qr_gen_view(request):
 
 @login_required
 def dashboard_view(request):
-    q = request.GET.get('q', '')
+    # q = request.GET.get('q', '')
     objs = DashboardModel.objects.filter(user=request.user)
     get_page = request.GET.get('page', 1)
     stuff = Paginator(objs, 2)
     page = stuff.page(get_page)
-    print(q)
-    if q:
-        objs = objs.filter(title__icontains=q)
+    # filters = DashboardFilter(request.GET, queryset=objs)
+    # objs = filters.qs
+    # print(filters)
+    # if q:
+    #     objs = objs.filter(title__icontains=q)
     return render(request, 'main/dashboard.html', context={
         'objs': page,
         'count': objs,
         'stuffs': stuff,
-        'q': q
+        # 'q': q
+        # 'filters': filters,
     })
 
 
