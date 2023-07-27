@@ -31,7 +31,159 @@
 }
 
 ul > .sign:hover {
-    background-color: #0d6efd!important;
-    color: white!important;
+    background-color: #0d6efd !important;
+    color: white !important;
 }
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.part3 {
+    font-family: ;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    font-size: 26px;
+    color: black;
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+::placeholder {
+    color: #616568;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+hr {
+    padding: 1px;
+    margin: 3px;
+}
+
+main {
+    margin: 0 auto;
+    margin-top: 60px;
+    position: relative;
+}
+
+.input1 {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 50px !important;
+}
+
+.generate {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #eee;
+
+}
+
+.generate:hover {
+    background-color: #ddd;
+}
+
+.qr-img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.qr-img img {
+    width: 100%;
+}
+
+.part1 {
+    position: absolute;
+    left: 220px;
+    width: 756px;
+    height: 555px;
+    border-radius: 10px;
+    border: #616568 2px solid;
+    background-color: white;
+}
+
+.part2 {
+    width: 379px;
+    height: 555px;
+    position: absolute;
+    border-radius: 10px;
+    right: 320px;
+    background-color: white;
+}
+
+.main2 {
+    margin: 10px;
+}
+
+section {
+    width: 100%;
+    height: calc(100vh - 84px);
+}
+
+.section1 {
+    margin-top: -50px;
+}
+
+.icon-btn a > button {
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #616568;
+    font-weight: 700;
+    width: 104px;
+    text-align: left;
+    transition: 1.2s;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.icon-btn a > button:hover {
+    background-color: #DFDFDF;
+}
+
+.part3 {
+    font-family: 'Mogra', cursive;
+    font-weight: 500;
+    width: 645px;
+}
+
+.sticky {
+    position: fixed;
+    top: 250px;
+    left: 0;
+    background-color: #FFF;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #C0CED5;
+    border-left: none;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: .5s ease-in-out;
+    height: 200px;
+}
+
+.sticky > a > i {
+    font-size: 24px;
+}
+
 

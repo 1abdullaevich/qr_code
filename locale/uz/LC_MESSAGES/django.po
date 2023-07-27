@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-22 20:35+0500\n"
+"POT-Creation-Date: 2023-07-27 13:00+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: core/settings.py:103
+#: core/settings.py:128
 msgid "Uzbek"
 msgstr "Uzbek"
 
-#: core/settings.py:104
+#: core/settings.py:129
 msgid "English"
 msgstr "Inglis"
 
-#: templates/layouts/navbar pro.html:19
+#: templates/layouts/navbar pro.html:18
 msgid "Account"
 msgstr "Profil"
 
-#: templates/layouts/navbar pro.html:27 templates/layouts/navbar.html:59
+#: templates/layouts/navbar pro.html:25 templates/layouts/navbar.html:62
 msgid "About us"
 msgstr "Biz xaqimzda info"
 
-#: templates/layouts/navbar pro.html:29 templates/layouts/navbar.html:60
+#: templates/layouts/navbar pro.html:27 templates/layouts/navbar.html:64
 msgid "Copyright"
 msgstr "Avtorski"
 
-#: templates/layouts/navbar pro.html:34
+#: templates/layouts/navbar pro.html:32
 #, fuzzy
 #| msgid "Log-out"
 msgid "LOg-out"
@@ -65,28 +65,32 @@ msgstr "Shaxsiy panel"
 msgid "MORE INFORMATION"
 msgstr "Koproq info"
 
-#: templates/main/dashboard.html:276
+#: templates/main/dashboard.html:292
 msgid "Enter Qr Code Title"
 msgstr "Qr kod nomini kiriting"
 
-#: templates/main/dashboard.html:280
+#: templates/main/dashboard.html:293
 msgid "Search"
 msgstr "Qidirish"
 
-#: templates/main/dashboard.html:283
+#: templates/main/dashboard.html:297
 msgid "+ CREATE QR CODE"
 msgstr "+ QR kod yasash"
 
-#: templates/main/dashboard.html:296
+#: templates/main/dashboard.html:301
+msgid "Active Qr Codes"
+msgstr "Faol Qr kodlari"
+
+#: templates/main/dashboard.html:311
 msgid "ago"
 msgstr "oldin"
 
-#: templates/main/dashboard.html:305 templates/main/index.html:194
-#: templates/main/index.html:206
+#: templates/main/dashboard.html:320 templates/main/index.html:190
+#: templates/main/index.html:202
 msgid "DOWNLOAD"
 msgstr "Otqazish"
 
-#: templates/main/dashboard.html:311
+#: templates/main/dashboard.html:326
 msgid "Sorry you dont have any scans!"
 msgstr "Kechirasiz, sizda hech qanday skaner yo'q!"
 
@@ -94,11 +98,11 @@ msgstr "Kechirasiz, sizda hech qanday skaner yo'q!"
 msgid "Create Your Own Qr Code"
 msgstr "Shaxsiy Qr kod yasang"
 
-#: templates/main/index.html:176
+#: templates/main/index.html:172
 msgid "Create and share any Qr Codes you want !"
 msgstr "O'zingiz xohlagan Qr kodlarini yarating"
 
-#: templates/main/index.html:183
+#: templates/main/index.html:179
 msgid "Generate"
 msgstr "Yaratish"
 
@@ -160,7 +164,7 @@ msgstr "Parol yoki nomi xato"
 
 #: venv/lib/python3.10/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
-msgstr ""
+msgstr "Xabarlar"
 
 #: venv/lib/python3.10/site-packages/django/contrib/sitemaps/apps.py:8
 msgid "Site Maps"

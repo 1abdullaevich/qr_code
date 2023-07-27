@@ -7,9 +7,11 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls import handler404
 
 handler404 = 'qrcodeapp.views.page_not_found_404'
+urlpatterns = [
+    path('admin/', admin.site.urls)
+]
 
-urlpatterns = i18n_patterns(
-    path('admin/', admin.site.urls),
+urlpatterns += i18n_patterns(
     # path('accounts/', include('allauth.urls')),
     path('', include('qrcodeapp.urls')),
     path('', include('user.urls')),
